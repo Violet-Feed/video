@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+grpc:
+  server:
+    port: 8081
+  client:
+    demo:
+      address: 'static://127.0.0.1:9091'
+      negotiation-type: plaintext
+spring:
+  data:
+    neo4j:
+      uri: bolt://localhost:7687
+      username: neo4j
+      password: 123456
