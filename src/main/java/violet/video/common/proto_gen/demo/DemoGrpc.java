@@ -1,4 +1,4 @@
-package violet.video.common.proto_gen;
+package violet.video.common.proto_gen.demo;
 
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
 import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
@@ -28,16 +28,16 @@ public final class DemoGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<violet.video.common.proto_gen.DemoOuterClass.DemoRequest,
-      violet.video.common.proto_gen.DemoOuterClass.DemoResponse> METHOD_GET_MESSAGE =
-      io.grpc.MethodDescriptor.<violet.video.common.proto_gen.DemoOuterClass.DemoRequest, violet.video.common.proto_gen.DemoOuterClass.DemoResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<violet.video.common.proto_gen.demo.DemoRequest,
+      violet.video.common.proto_gen.demo.DemoResponse> METHOD_GET_MESSAGE =
+      io.grpc.MethodDescriptor.<violet.video.common.proto_gen.demo.DemoRequest, violet.video.common.proto_gen.demo.DemoResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "Demo", "GetMessage"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              violet.video.common.proto_gen.DemoOuterClass.DemoRequest.getDefaultInstance()))
+              violet.video.common.proto_gen.demo.DemoRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              violet.video.common.proto_gen.DemoOuterClass.DemoResponse.getDefaultInstance()))
+              violet.video.common.proto_gen.demo.DemoResponse.getDefaultInstance()))
           .build();
 
   /**
@@ -69,8 +69,8 @@ public final class DemoGrpc {
 
     /**
      */
-    public void getMessage(violet.video.common.proto_gen.DemoOuterClass.DemoRequest request,
-        io.grpc.stub.StreamObserver<violet.video.common.proto_gen.DemoOuterClass.DemoResponse> responseObserver) {
+    public void getMessage(violet.video.common.proto_gen.demo.DemoRequest request,
+        io.grpc.stub.StreamObserver<violet.video.common.proto_gen.demo.DemoResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_MESSAGE, responseObserver);
     }
 
@@ -80,8 +80,8 @@ public final class DemoGrpc {
             METHOD_GET_MESSAGE,
             asyncUnaryCall(
               new MethodHandlers<
-                violet.video.common.proto_gen.DemoOuterClass.DemoRequest,
-                violet.video.common.proto_gen.DemoOuterClass.DemoResponse>(
+                violet.video.common.proto_gen.demo.DemoRequest,
+                violet.video.common.proto_gen.demo.DemoResponse>(
                   this, METHODID_GET_MESSAGE)))
           .build();
     }
@@ -107,8 +107,8 @@ public final class DemoGrpc {
 
     /**
      */
-    public void getMessage(violet.video.common.proto_gen.DemoOuterClass.DemoRequest request,
-        io.grpc.stub.StreamObserver<violet.video.common.proto_gen.DemoOuterClass.DemoResponse> responseObserver) {
+    public void getMessage(violet.video.common.proto_gen.demo.DemoRequest request,
+        io.grpc.stub.StreamObserver<violet.video.common.proto_gen.demo.DemoResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_MESSAGE, getCallOptions()), request, responseObserver);
     }
@@ -134,7 +134,7 @@ public final class DemoGrpc {
 
     /**
      */
-    public violet.video.common.proto_gen.DemoOuterClass.DemoResponse getMessage(violet.video.common.proto_gen.DemoOuterClass.DemoRequest request) {
+    public violet.video.common.proto_gen.demo.DemoResponse getMessage(violet.video.common.proto_gen.demo.DemoRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_MESSAGE, getCallOptions(), request);
     }
@@ -160,8 +160,8 @@ public final class DemoGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<violet.video.common.proto_gen.DemoOuterClass.DemoResponse> getMessage(
-        violet.video.common.proto_gen.DemoOuterClass.DemoRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<violet.video.common.proto_gen.demo.DemoResponse> getMessage(
+        violet.video.common.proto_gen.demo.DemoRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_MESSAGE, getCallOptions()), request);
     }
@@ -187,8 +187,8 @@ public final class DemoGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_MESSAGE:
-          serviceImpl.getMessage((violet.video.common.proto_gen.DemoOuterClass.DemoRequest) request,
-              (io.grpc.stub.StreamObserver<violet.video.common.proto_gen.DemoOuterClass.DemoResponse>) responseObserver);
+          serviceImpl.getMessage((violet.video.common.proto_gen.demo.DemoRequest) request,
+              (io.grpc.stub.StreamObserver<violet.video.common.proto_gen.demo.DemoResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -209,7 +209,7 @@ public final class DemoGrpc {
   private static final class DemoDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return violet.video.common.proto_gen.DemoOuterClass.getDescriptor();
+      return violet.video.common.proto_gen.demo.DemoOuterClass.getDescriptor();
     }
   }
 

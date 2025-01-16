@@ -1,6 +1,7 @@
 syntax = "proto3";
-option java_package = "violet.video.common.proto_gen";
-option go_package="/proto_gen";
+option java_multiple_files = true;
+option java_package = "violet.video.common.proto_gen.demo";
+option go_package="/proto_gen/demo";
 
 service Demo {
   rpc GetMessage (DemoRequest) returns (DemoResponse) {}
